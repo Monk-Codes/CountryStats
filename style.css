@@ -1,0 +1,161 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html {
+  font-size: 60%;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: system-ui;
+  color: #555;
+  background-image: linear-gradient(to right, #fc5c7d, #6a82fb);
+  min-height: 100vh;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.container {
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+}
+
+.countries {
+  display: flex;
+  font-size: 2rem;
+  opacity: 1;
+  transition: opacity 1s;
+}
+
+.country {
+  background-color: #fff;
+  box-shadow: 0 2rem 5rem 1rem rgba(0, 0, 0, 0.1);
+  font-size: 1.8rem;
+  width: 100%;
+  border-radius: 2% 1%;
+  margin: 0 3rem;
+  overflow: hidden;
+  transition: transform 0.3s;
+  position: relative;
+}
+.country:hover {
+  transform: scale(1.1);
+}
+
+.country__img {
+  display: flex;
+  width: auto;
+  height: auto;
+  object-fit: fill;
+  transition: transform 0.3s;
+}
+
+.country:hover .country__img {
+  transform: scale(1.1);
+}
+
+.country__data {
+  padding: 2.5rem 3.75rem 3rem 3.75rem;
+}
+
+.country__name {
+  font-size: 2.7rem;
+  margin-bottom: 0.7rem;
+}
+
+.country__region {
+  font-size: 1.4rem;
+  margin-bottom: 2.5rem;
+  text-transform: uppercase;
+  color: #888;
+}
+
+.country__row:not(:last-child) {
+  margin-bottom: 1rem;
+}
+
+.country__row span {
+  display: inline-block;
+  margin-right: 2rem;
+  font-size: 2.4rem;
+}
+
+.btn-country {
+  border: none;
+  margin-top: 10%;
+  font-size: 2rem;
+  padding: 2rem 5rem;
+  border-radius: 0.7rem;
+  color: white;
+  background-color: rgba(255, 68, 0, 0.711);
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.btn-country:hover {
+  background-color: darkorange;
+}
+
+.images {
+  display: flex;
+}
+
+.images img {
+  display: block;
+  width: 100%;
+  max-width: 80rem;
+  margin: 4rem;
+  transition: transform 0.3s;
+}
+
+.images img:hover {
+  transform: scale(1.1);
+}
+
+.images img.parallel {
+  width: 100%;
+  max-width: 40rem;
+}
+.maps-link {
+  display: flex;
+  align-items: center;
+  gap: 2.3rem;
+}
+.maps-link a {
+  color: blue;
+}
+
+.maps-link a:hover {
+  color: red;
+}
+/* Media Queries */
+
+@media only screen and (max-width: 768px) {
+  .country {
+    width: 30rem;
+    margin: 0 2rem;
+  }
+
+  .country__img {
+    width: 100%;
+    height: 15rem;
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  .country {
+    width: 25rem;
+    margin: 0 1rem;
+  }
+
+  .country__img {
+    width: 100%;
+    height: 100%;
+  }
+}
