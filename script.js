@@ -74,10 +74,3 @@ const updateSearchHistory = function () {
     searchHistoryList.appendChild(listItem);
   });
 };
-
-menuToggle.addEventListener('click', function () {
-  sidebar.classList.toggle('sidebar--collapsed');
-});
-collapseButton.addEventListener('click', function () {
-  sidebar.classList.add('sidebar--collapsed');
-});
