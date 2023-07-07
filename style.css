@@ -135,7 +135,7 @@ body {
   color: red;
 }
 .search-history-tab {
-  position: fixed;
+  position: sticky;
   left: 1rem;
   top: 1rem;
   width: auto;
